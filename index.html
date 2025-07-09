@@ -13,17 +13,18 @@
  <!--Babel est un convertisseur de jsx en js-->
  <!--JSX est une extension de syntaxe de js plus familère a l'HTML-->
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-<script type="text/jsx">
+<script type="text/babel">
    const app = document.getElementById('app');
  
-   function Header () {
-   return <h1>Develop. Preview. Ship.</h1>;
+   function Header ({title}) {
+      console.log(title);
+   return <h1>{title}</h1>;
  }
  function HomePage (){
    return (
       <div>
          {/* Nesting the Header component */}
-         <Header />  
+         <Header  title="React"/>  
       </div>
    )
  }
