@@ -10,13 +10,18 @@
    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 <!-- Babel Script -->
+ <!--Babel est un convertisseur de jsx en js-->
+ <!--JSX est une extension de syntaxe de js plus familère a l'HTML-->
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/jsx">
-
-      // Select the div element with 'app' id
-      const domNode = document.getElementById('app');
-      const root = ReactDOM.createRoot(domNode);
-      root.render(<h1>Develop. Preview. Ship.</h1>);
+   const app = document.getElementById('app');
+ 
+   function Header () {
+   return <h1>Develop. Preview. Ship.</h1>;
+ }
+      
+      const root = ReactDOM.createRoot(app);
+      root.render(<Header/>);
 </script>
    
 </body>
